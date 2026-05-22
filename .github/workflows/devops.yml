@@ -1,0 +1,23 @@
+name: DevOps Automation Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Display Message
+        run: echo "DevOps automation started"
+
+      - name: Show Files
+        run: ls -la
+
+      - name: Success Message
+        run: echo "Pipeline completed successfully"
